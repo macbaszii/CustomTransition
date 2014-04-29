@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDA5F933190FACFE003EFA68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5F932190FACFE003EFA68 /* Foundation.framework */; };
+		DDA5F935190FACFE003EFA68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5F934190FACFE003EFA68 /* CoreGraphics.framework */; };
+		DDA5F937190FACFE003EFA68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5F936190FACFE003EFA68 /* UIKit.framework */; };
+		DDA5F93D190FACFE003EFA68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDA5F93B190FACFE003EFA68 /* InfoPlist.strings */; };
+		DDA5F93F190FACFE003EFA68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA5F93E190FACFE003EFA68 /* main.m */; };
+		DDA5F943190FACFE003EFA68 /* OZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA5F942190FACFE003EFA68 /* OZAppDelegate.m */; };
+		DDA5F946190FACFE003EFA68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA5F944190FACFE003EFA68 /* Main.storyboard */; };
+		DDA5F949190FACFE003EFA68 /* OZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA5F948190FACFE003EFA68 /* OZViewController.m */; };
+		DDA5F94B190FACFE003EFA68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA5F94A190FACFE003EFA68 /* Images.xcassets */; };
+		DDA5F952190FACFE003EFA68 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5F951190FACFE003EFA68 /* XCTest.framework */; };
+		DDA5F953190FACFE003EFA68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5F932190FACFE003EFA68 /* Foundation.framework */; };
+		DDA5F954190FACFE003EFA68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5F936190FACFE003EFA68 /* UIKit.framework */; };
+		DDA5F95C190FACFE003EFA68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDA5F95A190FACFE003EFA68 /* InfoPlist.strings */; };
+		DDA5F95E190FACFE003EFA68 /* CustomTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA5F95D190FACFE003EFA68 /* CustomTransitionTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDA5F955190FACFE003EFA68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDA5F927190FACFE003EFA68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDA5F92E190FACFE003EFA68;
+			remoteInfo = CustomTransition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DDA5F92F190FACFE003EFA68 /* CustomTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDA5F932190FACFE003EFA68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DDA5F934190FACFE003EFA68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DDA5F936190FACFE003EFA68 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DDA5F93A190FACFE003EFA68 /* CustomTransition-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomTransition-Info.plist"; sourceTree = "<group>"; };
+		DDA5F93C190FACFE003EFA68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DDA5F93E190FACFE003EFA68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDA5F940190FACFE003EFA68 /* CustomTransition-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CustomTransition-Prefix.pch"; sourceTree = "<group>"; };
+		DDA5F941190FACFE003EFA68 /* OZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OZAppDelegate.h; sourceTree = "<group>"; };
+		DDA5F942190FACFE003EFA68 /* OZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OZAppDelegate.m; sourceTree = "<group>"; };
+		DDA5F945190FACFE003EFA68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDA5F947190FACFE003EFA68 /* OZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OZViewController.h; sourceTree = "<group>"; };
+		DDA5F948190FACFE003EFA68 /* OZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OZViewController.m; sourceTree = "<group>"; };
+		DDA5F94A190FACFE003EFA68 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DDA5F950190FACFE003EFA68 /* CustomTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDA5F951190FACFE003EFA68 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DDA5F959190FACFE003EFA68 /* CustomTransitionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomTransitionTests-Info.plist"; sourceTree = "<group>"; };
+		DDA5F95B190FACFE003EFA68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DDA5F95D190FACFE003EFA68 /* CustomTransitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDA5F92C190FACFE003EFA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA5F935190FACFE003EFA68 /* CoreGraphics.framework in Frameworks */,
+				DDA5F937190FACFE003EFA68 /* UIKit.framework in Frameworks */,
+				DDA5F933190FACFE003EFA68 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA5F94D190FACFE003EFA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA5F952190FACFE003EFA68 /* XCTest.framework in Frameworks */,
+				DDA5F954190FACFE003EFA68 /* UIKit.framework in Frameworks */,
+				DDA5F953190FACFE003EFA68 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDA5F926190FACFE003EFA68 = {
+			isa = PBXGroup;
+			children = (
+				DDA5F938190FACFE003EFA68 /* CustomTransition */,
+				DDA5F957190FACFE003EFA68 /* CustomTransitionTests */,
+				DDA5F931190FACFE003EFA68 /* Frameworks */,
+				DDA5F930190FACFE003EFA68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDA5F930190FACFE003EFA68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDA5F92F190FACFE003EFA68 /* CustomTransition.app */,
+				DDA5F950190FACFE003EFA68 /* CustomTransitionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDA5F931190FACFE003EFA68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDA5F932190FACFE003EFA68 /* Foundation.framework */,
+				DDA5F934190FACFE003EFA68 /* CoreGraphics.framework */,
+				DDA5F936190FACFE003EFA68 /* UIKit.framework */,
+				DDA5F951190FACFE003EFA68 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDA5F938190FACFE003EFA68 /* CustomTransition */ = {
+			isa = PBXGroup;
+			children = (
+				DDA5F941190FACFE003EFA68 /* OZAppDelegate.h */,
+				DDA5F942190FACFE003EFA68 /* OZAppDelegate.m */,
+				DDA5F944190FACFE003EFA68 /* Main.storyboard */,
+				DDA5F947190FACFE003EFA68 /* OZViewController.h */,
+				DDA5F948190FACFE003EFA68 /* OZViewController.m */,
+				DDA5F94A190FACFE003EFA68 /* Images.xcassets */,
+				DDA5F939190FACFE003EFA68 /* Supporting Files */,
+			);
+			path = CustomTransition;
+			sourceTree = "<group>";
+		};
+		DDA5F939190FACFE003EFA68 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDA5F93A190FACFE003EFA68 /* CustomTransition-Info.plist */,
+				DDA5F93B190FACFE003EFA68 /* InfoPlist.strings */,
+				DDA5F93E190FACFE003EFA68 /* main.m */,
+				DDA5F940190FACFE003EFA68 /* CustomTransition-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDA5F957190FACFE003EFA68 /* CustomTransitionTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDA5F95D190FACFE003EFA68 /* CustomTransitionTests.m */,
+				DDA5F958190FACFE003EFA68 /* Supporting Files */,
+			);
+			path = CustomTransitionTests;
+			sourceTree = "<group>";
+		};
+		DDA5F958190FACFE003EFA68 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDA5F959190FACFE003EFA68 /* CustomTransitionTests-Info.plist */,
+				DDA5F95A190FACFE003EFA68 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDA5F92E190FACFE003EFA68 /* CustomTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDA5F961190FACFE003EFA68 /* Build configuration list for PBXNativeTarget "CustomTransition" */;
+			buildPhases = (
+				DDA5F92B190FACFE003EFA68 /* Sources */,
+				DDA5F92C190FACFE003EFA68 /* Frameworks */,
+				DDA5F92D190FACFE003EFA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomTransition;
+			productName = CustomTransition;
+			productReference = DDA5F92F190FACFE003EFA68 /* CustomTransition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DDA5F94F190FACFE003EFA68 /* CustomTransitionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDA5F964190FACFE003EFA68 /* Build configuration list for PBXNativeTarget "CustomTransitionTests" */;
+			buildPhases = (
+				DDA5F94C190FACFE003EFA68 /* Sources */,
+				DDA5F94D190FACFE003EFA68 /* Frameworks */,
+				DDA5F94E190FACFE003EFA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDA5F956190FACFE003EFA68 /* PBXTargetDependency */,
+			);
+			name = CustomTransitionTests;
+			productName = CustomTransitionTests;
+			productReference = DDA5F950190FACFE003EFA68 /* CustomTransitionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDA5F927190FACFE003EFA68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OZ;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Kiattisak Anoochitarom";
+				TargetAttributes = {
+					DDA5F94F190FACFE003EFA68 = {
+						TestTargetID = DDA5F92E190FACFE003EFA68;
+					};
+				};
+			};
+			buildConfigurationList = DDA5F92A190FACFE003EFA68 /* Build configuration list for PBXProject "CustomTransition" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDA5F926190FACFE003EFA68;
+			productRefGroup = DDA5F930190FACFE003EFA68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDA5F92E190FACFE003EFA68 /* CustomTransition */,
+				DDA5F94F190FACFE003EFA68 /* CustomTransitionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDA5F92D190FACFE003EFA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA5F94B190FACFE003EFA68 /* Images.xcassets in Resources */,
+				DDA5F93D190FACFE003EFA68 /* InfoPlist.strings in Resources */,
+				DDA5F946190FACFE003EFA68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA5F94E190FACFE003EFA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA5F95C190FACFE003EFA68 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDA5F92B190FACFE003EFA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA5F93F190FACFE003EFA68 /* main.m in Sources */,
+				DDA5F949190FACFE003EFA68 /* OZViewController.m in Sources */,
+				DDA5F943190FACFE003EFA68 /* OZAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA5F94C190FACFE003EFA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA5F95E190FACFE003EFA68 /* CustomTransitionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDA5F956190FACFE003EFA68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDA5F92E190FACFE003EFA68 /* CustomTransition */;
+			targetProxy = DDA5F955190FACFE003EFA68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DDA5F93B190FACFE003EFA68 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDA5F93C190FACFE003EFA68 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DDA5F944190FACFE003EFA68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDA5F945190FACFE003EFA68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DDA5F95A190FACFE003EFA68 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDA5F95B190FACFE003EFA68 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDA5F95F190FACFE003EFA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DDA5F960190FACFE003EFA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDA5F962190FACFE003EFA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CustomTransition/CustomTransition-Prefix.pch";
+				INFOPLIST_FILE = "CustomTransition/CustomTransition-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DDA5F963190FACFE003EFA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CustomTransition/CustomTransition-Prefix.pch";
+				INFOPLIST_FILE = "CustomTransition/CustomTransition-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DDA5F965190FACFE003EFA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CustomTransition.app/CustomTransition";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CustomTransition/CustomTransition-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CustomTransitionTests/CustomTransitionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DDA5F966190FACFE003EFA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CustomTransition.app/CustomTransition";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CustomTransition/CustomTransition-Prefix.pch";
+				INFOPLIST_FILE = "CustomTransitionTests/CustomTransitionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDA5F92A190FACFE003EFA68 /* Build configuration list for PBXProject "CustomTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDA5F95F190FACFE003EFA68 /* Debug */,
+				DDA5F960190FACFE003EFA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDA5F961190FACFE003EFA68 /* Build configuration list for PBXNativeTarget "CustomTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDA5F962190FACFE003EFA68 /* Debug */,
+				DDA5F963190FACFE003EFA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DDA5F964190FACFE003EFA68 /* Build configuration list for PBXNativeTarget "CustomTransitionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDA5F965190FACFE003EFA68 /* Debug */,
+				DDA5F966190FACFE003EFA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDA5F927190FACFE003EFA68 /* Project object */;
+}
