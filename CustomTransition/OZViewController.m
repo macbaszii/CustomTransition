@@ -8,7 +8,14 @@
 
 #import "OZViewController.h"
 
-@interface OZViewController ()
+#import "OZLoginViewController.h"
+#import "OZDialogTransition.h"
+
+@interface OZViewController () <UIViewControllerTransitioningDelegate>
+
+@property (nonatomic, weak) IBOutlet UILabel *label;
+
+- (IBAction)showLoginDialog:(id)sender;
 
 @end
 
@@ -17,13 +24,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view, typically from a nib.    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Action
+
+- (IBAction)showLoginDialog:(id)sender {
+    OZLoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"OZLoginViewController"];
+    
+    loginViewController.modalPresentationStyle = UIModalPresentationCustom;
+    loginViewController.transitioningDelegate = self;
+    
+    [self presentViewController:loginViewController
+                       animated:YES
+                     completion:nil];
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    
+    return [[OZDialogTransition alloc] init];
 }
 
 @end

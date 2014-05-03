@@ -21,6 +21,10 @@
 		DDA5F954190FACFE003EFA68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5F936190FACFE003EFA68 /* UIKit.framework */; };
 		DDA5F95C190FACFE003EFA68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDA5F95A190FACFE003EFA68 /* InfoPlist.strings */; };
 		DDA5F95E190FACFE003EFA68 /* CustomTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA5F95D190FACFE003EFA68 /* CustomTransitionTests.m */; };
+		DDA5F968190FAD91003EFA68 /* geeks.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA5F967190FAD91003EFA68 /* geeks.png */; };
+		DDA5F96B190FAF2D003EFA68 /* OZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA5F96A190FAF2D003EFA68 /* OZLoginViewController.m */; };
+		DDA5F96E190FB044003EFA68 /* OZDialogTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA5F96D190FB044003EFA68 /* OZDialogTransition.m */; };
+		DDA5F970190FB814003EFA68 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5F96F190FB814003EFA68 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		DDA5F959190FACFE003EFA68 /* CustomTransitionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomTransitionTests-Info.plist"; sourceTree = "<group>"; };
 		DDA5F95B190FACFE003EFA68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDA5F95D190FACFE003EFA68 /* CustomTransitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionTests.m; sourceTree = "<group>"; };
+		DDA5F967190FAD91003EFA68 /* geeks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geeks.png; sourceTree = "<group>"; };
+		DDA5F969190FAF2D003EFA68 /* OZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OZLoginViewController.h; sourceTree = "<group>"; };
+		DDA5F96A190FAF2D003EFA68 /* OZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OZLoginViewController.m; sourceTree = "<group>"; };
+		DDA5F96C190FB044003EFA68 /* OZDialogTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OZDialogTransition.h; sourceTree = "<group>"; };
+		DDA5F96D190FB044003EFA68 /* OZDialogTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OZDialogTransition.m; sourceTree = "<group>"; };
+		DDA5F96F190FB814003EFA68 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA5F970190FB814003EFA68 /* QuartzCore.framework in Frameworks */,
 				DDA5F935190FACFE003EFA68 /* CoreGraphics.framework in Frameworks */,
 				DDA5F937190FACFE003EFA68 /* UIKit.framework in Frameworks */,
 				DDA5F933190FACFE003EFA68 /* Foundation.framework in Frameworks */,
@@ -101,6 +112,7 @@
 		DDA5F931190FACFE003EFA68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DDA5F96F190FB814003EFA68 /* QuartzCore.framework */,
 				DDA5F932190FACFE003EFA68 /* Foundation.framework */,
 				DDA5F934190FACFE003EFA68 /* CoreGraphics.framework */,
 				DDA5F936190FACFE003EFA68 /* UIKit.framework */,
@@ -117,6 +129,11 @@
 				DDA5F944190FACFE003EFA68 /* Main.storyboard */,
 				DDA5F947190FACFE003EFA68 /* OZViewController.h */,
 				DDA5F948190FACFE003EFA68 /* OZViewController.m */,
+				DDA5F969190FAF2D003EFA68 /* OZLoginViewController.h */,
+				DDA5F96A190FAF2D003EFA68 /* OZLoginViewController.m */,
+				DDA5F96C190FB044003EFA68 /* OZDialogTransition.h */,
+				DDA5F96D190FB044003EFA68 /* OZDialogTransition.m */,
+				DDA5F967190FAD91003EFA68 /* geeks.png */,
 				DDA5F94A190FACFE003EFA68 /* Images.xcassets */,
 				DDA5F939190FACFE003EFA68 /* Supporting Files */,
 			);
@@ -232,6 +249,7 @@
 				DDA5F94B190FACFE003EFA68 /* Images.xcassets in Resources */,
 				DDA5F93D190FACFE003EFA68 /* InfoPlist.strings in Resources */,
 				DDA5F946190FACFE003EFA68 /* Main.storyboard in Resources */,
+				DDA5F968190FAD91003EFA68 /* geeks.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA5F93F190FACFE003EFA68 /* main.m in Sources */,
+				DDA5F96E190FB044003EFA68 /* OZDialogTransition.m in Sources */,
 				DDA5F949190FACFE003EFA68 /* OZViewController.m in Sources */,
 				DDA5F943190FACFE003EFA68 /* OZAppDelegate.m in Sources */,
+				DDA5F96B190FAF2D003EFA68 /* OZLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
