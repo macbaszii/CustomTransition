@@ -47,7 +47,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="h4l-EH-x6y" id="Njt-4p-JqL"/>
+                        <outlet property="containerView" destination="h4l-EH-x6y" id="es4-Ns-40w"/>
                         <outlet property="emailField" destination="4az-6E-2n1" id="8zk-on-UPs"/>
                         <outlet property="passwordField" destination="I07-oO-ClA" id="iO2-bP-7CO"/>
                     </connections>

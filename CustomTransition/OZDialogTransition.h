@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol OZDialogTransitionDataSource <NSObject>
+
+- (UIView *)loginDialog;
+
+@end
+
 @interface OZDialogTransition : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end

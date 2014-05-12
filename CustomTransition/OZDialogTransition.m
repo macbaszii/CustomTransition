@@ -19,31 +19,27 @@ static CGFloat const zeroDelayDuration = 0.0f;
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController <OZDialogTransitionDataSource> *toVC = (UIViewController<OZDialogTransitionDataSource> *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIView *loginDialog = [toVC loginDialog];
     
+    [[transitionContext containerView] addSubview:fromVC.view];
     [[transitionContext containerView] addSubview:toVC.view];
     
-    CGRect presentedRect = [transitionContext initialFrameForViewController:fromVC];
-    toVC.view.frame = CGRectMake(0,
-                                 -CGRectGetMaxY(presentedRect),
-                                 CGRectGetWidth(toVC.view.frame),
-                                 CGRectGetHeight(toVC.view.frame));
+    CGRect endRect = loginDialog.frame;
+    CGRect beginRect = endRect;
+    beginRect.origin.y -= CGRectGetHeight(toVC.view.frame);
+    loginDialog.frame = beginRect;
     
     [UIView animateWithDuration:animationDuration
                           delay:zeroDelayDuration
-         usingSpringWithDamping:0.6f
+         usingSpringWithDamping:0.7f
           initialSpringVelocity:0.8f
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         toVC.view.frame = CGRectMake(0,
-                                                      0,
-                                                      CGRectGetWidth(presentedRect),
-                                                      CGRectGetHeight(presentedRect));
+                         toVC.view.backgroundColor = [UIColor colorWithWhite:0.45 alpha:0.9];
+                         loginDialog.frame = endRect;
                      }
                      completion:^(BOOL finished) {
-                         [UIView animateWithDuration:0.3 animations:^{
-                            toVC.view.backgroundColor = [UIColor colorWithWhite:0.45 alpha:0.9];
-                         }];
                          [transitionContext completeTransition:YES];
                      }];
 }

@@ -10,6 +10,4 @@
 
 @interface OZLoginViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UIView *containerView;
-
 @end
