@@ -18,30 +18,56 @@ static CGFloat const zeroDelayDuration = 0.0f;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
-    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UIViewController <OZDialogTransitionDataSource> *toVC = (UIViewController<OZDialogTransitionDataSource> *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    UIView *loginDialog = [toVC loginDialog];
+    UIViewController *fromVC;
+    UIViewController <OZDialogTransitionDataSource> *toVC;
     
-    [[transitionContext containerView] addSubview:fromVC.view];
-    [[transitionContext containerView] addSubview:toVC.view];
+    if (self.presented) {
+        fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+        toVC = (UIViewController<OZDialogTransitionDataSource> *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+        UIView *loginDialog = [toVC loginDialog];
+        
+        [[transitionContext containerView] addSubview:fromVC.view];
+        [[transitionContext containerView] addSubview:toVC.view];
+        
+        CGRect endRect = loginDialog.frame;
+        CGRect beginRect = endRect;
+        beginRect.origin.y -= CGRectGetHeight(toVC.view.frame);
+        loginDialog.frame = beginRect;
+        
+        [UIView animateWithDuration:animationDuration
+                              delay:zeroDelayDuration
+             usingSpringWithDamping:0.7f
+              initialSpringVelocity:0.8f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             toVC.view.backgroundColor = [UIColor colorWithWhite:0.45 alpha:0.9];
+                             loginDialog.frame = endRect;
+                         }
+                         completion:^(BOOL finished) {
+                             [transitionContext completeTransition:YES];
+                         }];
+    } else {
+        fromVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+        toVC = (UIViewController<OZDialogTransitionDataSource> *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+        
+        UIView *loginDialog = [toVC loginDialog];
+        
+        [[transitionContext containerView] addSubview:fromVC.view];
+        [[transitionContext containerView] addSubview:toVC.view];
+        
+        CGRect endRect = loginDialog.frame;
+        endRect.origin.y = CGRectGetMinY(fromVC.view.frame) - CGRectGetHeight(endRect);
+        
+        [UIView animateWithDuration:animationDuration / 2
+                         animations:^{
+                             loginDialog.frame = endRect;
+                             toVC.view.backgroundColor = [UIColor clearColor];
+                         }
+                         completion:^(BOOL finished) {
+                             [transitionContext completeTransition:YES];
+                         }];
+    }
     
-    CGRect endRect = loginDialog.frame;
-    CGRect beginRect = endRect;
-    beginRect.origin.y -= CGRectGetHeight(toVC.view.frame);
-    loginDialog.frame = beginRect;
-    
-    [UIView animateWithDuration:animationDuration
-                          delay:zeroDelayDuration
-         usingSpringWithDamping:0.7f
-          initialSpringVelocity:0.8f
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         toVC.view.backgroundColor = [UIColor colorWithWhite:0.45 alpha:0.9];
-                         loginDialog.frame = endRect;
-                     }
-                     completion:^(BOOL finished) {
-                         [transitionContext completeTransition:YES];
-                     }];
 }
 
 @end

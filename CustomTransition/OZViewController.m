@@ -44,7 +44,18 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     
-    return [[OZDialogTransition alloc] init];
+    OZDialogTransition *transition = [[OZDialogTransition alloc] init];
+    transition.presented = YES;
+    
+    return transition;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    
+    OZDialogTransition *transition = [[OZDialogTransition alloc] init];
+    transition.presented = NO;
+    
+    return transition;
 }
 
 @end

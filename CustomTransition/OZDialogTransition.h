@@ -16,4 +16,6 @@
 
 @interface OZDialogTransition : NSObject <UIViewControllerAnimatedTransitioning>
 
+@property (nonatomic) BOOL presented;
+
 @end
