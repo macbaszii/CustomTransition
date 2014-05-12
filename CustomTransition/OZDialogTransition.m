@@ -47,8 +47,8 @@ static CGFloat const zeroDelayDuration = 0.0f;
                              [transitionContext completeTransition:YES];
                          }];
     } else {
-        fromVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
         toVC = (UIViewController<OZDialogTransitionDataSource> *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+        fromVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
         
         UIView *loginDialog = [toVC loginDialog];
         
@@ -58,7 +58,7 @@ static CGFloat const zeroDelayDuration = 0.0f;
         CGRect endRect = loginDialog.frame;
         endRect.origin.y = CGRectGetMinY(fromVC.view.frame) - CGRectGetHeight(endRect);
         
-        [UIView animateWithDuration:animationDuration / 2
+        [UIView animateWithDuration:animationDuration / 3
                          animations:^{
                              loginDialog.frame = endRect;
                              toVC.view.backgroundColor = [UIColor clearColor];
